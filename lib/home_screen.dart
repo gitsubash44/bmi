@@ -1,3 +1,4 @@
+import 'package:bmi/age_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi/height_widget.dart';
 import 'package:bmi/gender_widget.dart';
@@ -14,6 +15,8 @@ class HomeScreen extends StatefulWidget {
 class _MyAppState extends State<HomeScreen> {
   int _gender = 0; // Declare the _gender variable here
   int _height = 150;
+  int _age = 30;
+  int _weight = 50;
 
   @override
   Widget build(BuildContext context) {
@@ -50,6 +53,27 @@ class _MyAppState extends State<HomeScreen> {
                     onChange: (heightVal) {
                       _height = heightVal;
                     },
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      AgeWidget(
+                          onChange: (ageVal) {
+                            _age = ageVal;
+                          },
+                          title: ('Age'),
+                          initValue: 30,
+                          min: 0,
+                          max: 100),
+                      AgeWidget(
+                          onChange: (weaightVal) {
+                            _weight = weaightVal;
+                          },
+                          title: ('Weight(Kg)'),
+                          initValue: 50,
+                          min: 0,
+                          max: 200),
+                    ],
                   ),
                 ],
               ),
