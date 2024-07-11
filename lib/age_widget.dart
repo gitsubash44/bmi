@@ -37,17 +37,18 @@ class _AgeWidgetState extends State<AgeWidget> {
         elevation: 12,
         shape: const RoundedRectangleBorder(),
         child: Column(children: [
-          Text(
-            widget.title,
-            style: TextStyle(
-              fontSize: 20,
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Text(
+              widget.title,
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(18.0),
             child: Row(
               children: [
                 InkWell(
