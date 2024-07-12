@@ -1,10 +1,12 @@
 import 'dart:math';
 
 import 'package:bmi/age_widget.dart';
+import 'package:bmi/score_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:bmi/height_widget.dart';
 import 'package:bmi/gender_widget.dart';
 import 'package:swipeable_button_view/swipeable_button_view.dart';
+import 'package:page_transition/page_transition.dart';
 
 void main() => runApp(const HomeScreen());
 
@@ -89,7 +91,15 @@ class _MyAppState extends State<HomeScreen> {
                         vertical: 20, horizontal: 40),
                     child: SwipeableButtonView(
                       isFinished: _isFinished,
-                      onFinish: () {
+                      onFinish: () async {
+                        await Navigator.push(
+                            context,
+                            PageTransition(
+                                child: ScoreScreen(
+                                  bmiScore: _bmiScore,
+                                  age: _age,
+                                ),
+                                type: PageTransitionType.fade));
                         setState(() {
                           _isFinished = false;
                         });
