@@ -63,7 +63,7 @@ class _MyAppState extends State<HomeScreen> {
                     },
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(12),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
