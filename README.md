@@ -1,7 +1,8 @@
 # bmi
 
 A new Flutter project.
-This Project of BMI.
+This Project of BMI (Body mass index).
+you can chake your quality :) 
 
 ## Getting Started
 
